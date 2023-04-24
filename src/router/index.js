@@ -1,11 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Main from '@/pages/Main'
+import Posts from '@/pages/Posts'
+import PostIdPage from '@/components/PostIdPage'
+import PostWithStore from '@/pages/PostWithStore'
+import PostWithApi from '@/pages/PostWithApi'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: Main
+  },
+  {
+    path: '/posts',
+    name: 'posts',
+    component: Posts
+  },
+  {
+    path: '/store',
+    name: 'postsStore',
+    component: PostWithStore
+  },
+  {
+    path: '/api',
+    name: 'apiPost',
+    component: PostWithApi
+  },
+  {
+    path: '/posts/:id',
+    name: 'postsIdPage',
+    component: PostIdPage
   },
   {
     path: '/about',
